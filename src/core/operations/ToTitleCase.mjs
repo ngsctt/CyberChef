@@ -45,7 +45,7 @@ class ToTitleCase extends Operation {
     run(input, args) {
         return input.replace(/(?:\b\w+['’]\w+\b)|(?:\b\w+\b)/g, (m) => {
             return FUNCTIONAL_WORDS.indexOf(m) < 0 ? m[0].toUpperCase() + m.slice(1) : m.toLowerCase();
-        })
+        });
     }
 
     /**
